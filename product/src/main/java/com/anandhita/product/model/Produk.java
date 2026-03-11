@@ -1,0 +1,20 @@
+package com.anandhita.product.model;
+
+import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Data
+@Entity
+
+public class Produk {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nama;
+    private String deskripsi;
+    private double harga;
+
+}
